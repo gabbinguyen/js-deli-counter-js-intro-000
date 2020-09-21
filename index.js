@@ -28,5 +28,4 @@ function currentLine(katzDeliLine) {
   }
 }
 // for loop iterates through katzDeliLine
-// second array "line"  -- EXPLAIN MAYBE LOOK UP MULTIDEMINSIONAL ARRAYS??
 // if/else identifies if there is a line or not and uses the correct statement for either scenario
