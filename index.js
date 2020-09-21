@@ -1,4 +1,4 @@
-function takeANumber (katzDeliLine, name) {
+function takeANumber(katzDeliLine, name) {
   katzDeliLine.push(name);
   return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`
 }
@@ -6,10 +6,10 @@ function takeANumber (katzDeliLine, name) {
 // .length property is used to identify the number of elements in the array
 // template literal placeholder is used and is replacd by the new values (name of the customer and the new current line)
 
-function nowServing (katzDeliLine) {
+function nowServing(katzDeliLine) {
   if (katzDeliLine.length > 0) {
-    var newLine = katzDeliLine.shift();
-    return `Currently serving ${newLine}.`
+    var nextCustomer = katzDeliLine.shift();
+    return `Currently serving ${nextCustomer}.`
   } else {
     return `There is nobody waiting to be served!`
   }
@@ -18,11 +18,12 @@ function nowServing (katzDeliLine) {
 // if/else identifies if there is a line or not and uses the correct statement for either scenario
 
 function currentLine(katzDeliLine) {
-  var line = []
   if (katzDeliLine.length > 0) {
+    var line = []
     for (var i = 0; i < katzDeliLine.length; i++) {
       line.push(` ${i+1}. ${katzDeliLine[i]}`);
-    } return `The line is currently:${line}`
+    } 
+    return `The line is currently:${line}`
   } else {
       return `The line is currently empty.`
   }
